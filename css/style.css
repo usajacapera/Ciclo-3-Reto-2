@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Mulish";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("fondo.png");
+} 
+header {
+    margin: 25px 0 25px 0;
+}
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse:collapse;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+div {
+    background-color: #F7F7F7;
+    padding: 15px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: baseline;
+    width: 500px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.div-button{
+    background-color: #F7F7F7;
+    padding: 15px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border: 2px solid  #F7F7F7;
+    border-radius: 15px;
+    gap: 20px;
+}
+.div-table{
+    border: 2px solid  #F7F7F7;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+}
+.div-form{
+    border: 1px solid  black;
+    border-radius: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: auto;
+}
+.div-form form{
+    display:grid;
+    grid-template-columns: 130px 250px;
+    align-items: center;
+}
+.div-form span{
+    text-align: end;
+    align-items: center;
+    padding-right: 10px;
+}
+.div-form input{
+    align-content: center;
+}
+input {
+    border: 1px solid black;
+    font-family: "Mulish";
+    padding: 5px;
+    border-radius: 5px;
+    width: 250px;
+    height: 35px;
+    margin: 5px 0 5px 0;
+}
+.input-id {
+    width: 65px;
+    font-size: 1.3rem;
+    padding-right: 0px;
+}
+button {
+    cursor: pointer;
+    font-family: "Mulish";
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-color: #ACD9B2;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    background-color: #ACD9B2;
+    padding: 5px;
+}
+label{
+    font-size: 2rem;
+}
+span{
+    font-size: 2rem;
+}
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    color: blue;
+    font-weight: bold;
+}
+h2 {
+    font-size: 3rem;
+    color: burlywood;
+    font-weight: bold;
+    justify-content: center;
+    margin: 5px 0 5px 0;
+}

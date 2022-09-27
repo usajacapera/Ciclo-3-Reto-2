@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ajax Tutorial Grupo  9</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/misFunciones.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Reto 2 Alquiler de Botes</h1>
+            <nav></nav>
+        </header>
+        <main>
+            <section>
+                <!--<figure>
+                    <img src="./pics/bote.png" alt="es una imagen de un bote">
+                    <figcaption>Alquiler de botes</figcaption>
+                </figure>-->
+                    <div>
+                        <h2>BOTES</h2>
+                        <div class="div-form">
+                            <h2>Ingresar Datos</h2>
+                            <form>
+                                <span>ID Bote</span>
+                                <input type="number" id="id" placeholder="Ingresa id">
+                                <span>Brand</span>
+                                <input type="text" id="brand" placeholder="Ingresa brand">
+                                <span>Model</span>
+                                <input type="number" id="model" placeholder="Ingresa model">
+                                <span>Category_ID</span>
+                                <input type="number" id="category_id" placeholder="Ingresa category_id">
+                                <span>Name</span>
+                                <input type="text" id="name" placeholder="Ingresa name">
+                            </form>
+                        </div>
+                        <div class="div-button">
+                            <button onclick="addInfoBoat()">Crear</button>
+                            <button onclick="modInfBoat()">Actualizar</button>
+                            <button onclick="getInfBoat()"> Consultar</button>
+                            <button onclick="queryByIdBoat()">TraerID</button>
+                            <input class="input-id" type="number" id="idBote" placeholder="idBote">
+                        </div>
+                        <div class="div-table">
+                            <p id="resultadoBote"></p>
+                        </div>
+                    </div>
+                    <!--===========================CLIENTES======================================-->  
+                    <div>
+                        <h2>CLIENTES</h2>
+                        <div class="div-form">
+                            <h2>Ingresar Datos</h2>
+                            <form>
+                                <span>ID Client</span>
+                                <input type="number" id="idCliente" placeholder="Ingrese idCliente">
+                                <span>Name</span>
+                                <input type="text" id="nameCliente" placeholder="Ingrese nameCliente">
+                                <span>Email</span>
+                                <input type="text" id="email" placeholder="Ingrese email">
+                                <span>Age</span>
+                                <input type="number" id="age" placeholder="Ingrese age">
+                            </form>
+                        </div>
+                        <div class="div-button">
+                            <button onclick="guardarInfCliente()">Crear</button>
+                            <button onclick="editarInfCliente()">Actualizar</button>
+                            <button onclick="traerInfCliente()">Consultar</button>
+                            <button onclick="queryByIdClient()">TraerID</button>
+                            <input class="input-id" type="number" id="idClient" placeholder="idClient">
+                        </div>
+                        <div class="div-table">
+                            <p id="resultadoCliente"></p>
+                        </div>
+                    </div>
+                    <!--===========================MENSAJES======================================-->  
+                    <div>
+                        <h2>MENSAJES</h2>
+                        <div class="div-form">
+                            <h2>Ingresar Datos</h2>
+                            <form>
+                                <span>ID Message</span>
+                                <input type="number" id="idMensaje" placeholder="Ingrese idMensaje">
+                                <span>MessageText</span>
+                                <input type="text" id="messagetext" placeholder="Ingrese messagetext">
+                            </form>
+                        </div>
+                        <div class="div-button">
+                            <button onclick="guardarMensaje()">Crear</button>
+                            <button onclick="editarMensaje()">Actualizar</button>
+                            <button onclick="traerMensaje()">Consultar</button>
+                        </div>
+                        <div class="div-table">
+                            <p id="resultadoMensaje"></p>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
