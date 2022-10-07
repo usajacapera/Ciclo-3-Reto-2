@@ -768,44 +768,49 @@ function pintarMensaje(respuesta){
     $("#resultadoMensajes").append(myTable);
 }
 function guardarMensaje(){
-    let myData2 = {
-        idClient:$("#idGetClientMessage").val()
-    };
-    let myData3 = {
-        id:$("#idGetBoatMessage").val()
-    };
-    let myData = {
-        idMensaje:$("#idMensaje").val(),
-        messageText:$("#messagetext").val(),
-        boat:myData3,
-        client:myData2
-    };
-    let dataToSend = JSON.stringify(myData);
-    $.ajax({
-        headers:{
-            accept: 'application/json',"Access-Control-Allow-Origin":"*", "Content-Type": 'application/json'
-        },
-        url: ruta + "/api/Message/save",
-        type:"POST",
-        data:dataToSend,
-        datatype:"JSON",
-        success:function(respuesta){
-            $("#resultadoMensajes").empty();
-            $("#idMensaje").val("");
-            $("#messagetext").val("");
-            $("#idGetBoatMessage").val("");
-            $("#idGetClientMessage").val("");
-            traerMensajes();
-            alert("Mensaje creado exitosamente");
-        },
-        error : function(xhr, status){
-            alert("ha sucedido un problema");
-            console.log(status);
-        },
-        complete : function(xhr, status){
-            console.log("Petición completada");
-        }
-    });
+    if($("#idGetBoatMessage").val() != "" && $("#idGetClientMessage").val() != ""){
+        let myData2 = {
+            idClient:$("#idGetClientMessage").val()
+        };
+        let myData3 = {
+            id:$("#idGetBoatMessage").val()
+        };
+        let myData = {
+            idMensaje:$("#idMensaje").val(),
+            messageText:$("#messagetext").val(),
+            boat:myData3,
+            client:myData2
+        };
+        let dataToSend = JSON.stringify(myData);
+        $.ajax({
+            headers:{
+                accept: 'application/json',"Access-Control-Allow-Origin":"*", "Content-Type": 'application/json'
+            },
+            url: ruta + "/api/Message/save",
+            type:"POST",
+            data:dataToSend,
+            datatype:"JSON",
+            success:function(respuesta){
+                $("#resultadoMensajes").empty();
+                $("#idMensaje").val("");
+                $("#messagetext").val("");
+                $("#idGetBoatMessage").val("");
+                $("#idGetClientMessage").val("");
+                traerMensajes();
+                alert("Mensaje creado exitosamente");
+            },
+            error : function(xhr, status){
+                alert("ha sucedido un problema");
+                console.log(status);
+            },
+            complete : function(xhr, status){
+                console.log("Petición completada");
+            }
+        });
+    }else{
+        alert("Debe asignar el mensaje a un cliente y un barco")
+    }
+    
 }
 function editarMensaje(){
     let myData = {
